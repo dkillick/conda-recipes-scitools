@@ -2,6 +2,9 @@
 # python distribution for the scientific python stack.
 language: c
 
+os:
+ - osx
+
 env:
     global:
         # Add the BINSTAR_TOKEN environment variable. This has been generated with "binstar auth --create" and is valid for the next 12 months.
