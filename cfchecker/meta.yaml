@@ -18,13 +18,13 @@ requirements:
         - python
         - setuptools
         - cdat-lite
-        - udunits2
+        - https://conda.binstar.org/scitools udunits
     run:
         - python
         - numpy
         - setuptools
         - cdat-lite
-        - udunits2
+        - https://conda.binstar.org/scitools udunits
 
 test:
     commands:
