@@ -54,7 +54,10 @@ def main():
     conda_recipes_root = os.path.dirname(os.path.dirname(
                                 os.path.dirname(os.path.abspath(__file__))))
     for package, directory, yaml in conda_packages(conda_recipes_root):
-        upload_built_package(package, os.environ['BINSTAR_TOKEN'], conda_recipes_root)
+        try:
+            upload_built_package(package, os.environ['BINSTAR_TOKEN'], conda_recipes_root)
+        except KeyError:
+            print('Branch has not been merged, packages will not be uploaded to Binstar.')
 
 
 if __name__ == '__main__':
