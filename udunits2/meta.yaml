@@ -11,9 +11,16 @@ source:
 
 requirements:
   build:
+    - cmake  # [win]
     - expat  # [win]
+    - vc 9  # [win]
+    - vc 10  # [win]
+    - vc 14  # [win]
   run:
     - expat  # [win]
+    - vc 9  # [win]
+    - vc 10  # [win]
+    - vc 14  # [win]
 
 build:
     number: 0
