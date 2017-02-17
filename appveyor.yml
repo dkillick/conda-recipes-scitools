@@ -58,6 +58,11 @@ install:
     - cmd: set PATH=%PATH%;%CONDA_INSTALL_LOCN%;%CONDA_INSTALL_LOCN%\scripts
     - cmd: set PYTHONUNBUFFERED=1
 
+    - cmd: conda info
+    # At 2017-02-17, conda-build-all is not available on win-py36.
+#    - cmd: conda install --yes --quiet ruamel ruamel-yaml
+    - cmd: conda install --yes --force python=3.5
+    - cmd: conda list
     - cmd: conda config --add channels scitools
     - cmd: conda config --set show_channel_urls yes
 
